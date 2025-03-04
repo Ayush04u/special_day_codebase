@@ -55,6 +55,7 @@
 </style>
 
 <body>
+    <audio id="music" src="128-Tum Jo Aaye Jindagi - Once Upon A Time In Mumbaai 128 Kbps.mp3"></audio>
     <img src="ZUiY.gif" alt="stars" class="star">
     <img src="5l03.gif" alt="ballon" class="ballon">
     <div class="container">
@@ -162,6 +163,20 @@
             let warpdT = document.querySelector(".wrap-decoTwo");
             let plate = document.querySelector(".plate");
 
+                var music = document.getElementById('music');
+
+                // Set the start time (e.g., 5 seconds)
+                music.currentTime = 23git;
+
+                music.play();
+
+                // Stop the music after 10 seconds
+                setTimeout(function () {
+                    music.pause();
+                    music.currentTime = 0; // Reset the audio to the beginning
+                }, 90000);
+
+
             // Toggle cardFront open/close state
             if (cardFront.classList.contains("open")) {
                 // Close the card
@@ -202,6 +217,8 @@
                     warpdT.style.display = "none";
                     plate.style.display = "none";
                 }, 500); // Match opacity transition duration
+
+
 
                 // Add a message inside the card
                 let cardInside = document.querySelector(".cardInside");
