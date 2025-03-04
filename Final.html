@@ -9,27 +9,32 @@
 </head>
 <style>
     /* Add this CSS to style.css */
-    
-        /* Add this CSS to style.css */
+
+    /* Add this CSS to style.css */
     .letter-container {
         text-align: center;
         margin-top: 20px;
     }
-    
+
     #forYouButton {
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
-        background-color: #ff69b4; /* Pookie style */
-        color: white; /* Pookie style */
-        border: none; /* Pookie style */
-        border-radius: 5px; /* Pookie style */
+        background-color: #ff69b4;
+        /* Pookie style */
+        color: white;
+        /* Pookie style */
+        border: none;
+        /* Pookie style */
+        border-radius: 5px;
+        /* Pookie style */
     }
-    
+
     #forYouButton:hover {
-        background-color: #ff1493; /* Pookie style */
+        background-color: #ff1493;
+        /* Pookie style */
     }
-    
+
     .letter {
         margin-top: 20px;
         padding: 20px;
@@ -38,22 +43,22 @@
         display: inline-block;
         text-align: left;
     }
-   
-.letter {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    display: inline-block;
-    text-align: left;
-}
+
+    .letter {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        display: inline-block;
+        text-align: left;
+    }
 </style>
 
 <body>
     <img src="ZUiY.gif" alt="stars" class="star">
     <img src="5l03.gif" alt="ballon" class="ballon">
     <div class="container">
-        <div class="birthdayCard">
+        <div id="bcard" class="birthdayCard">
             <div class="cardFront">
                 <div class="front-text">
                     <h3 class="happy">HAPPY</h3>
@@ -75,7 +80,7 @@
             </div>
             <div class="cardInside">
                 <div class="img">
-                    <img src="./WhatsApp Image 2025-03-01 at 15.49.45.jpeg" alt="Brotherpic" class="bdyboy">
+                    <img src="Palak_n1.jpg" alt="Brotherpic" class="bdyboy">
                     <img src="6ob.gif" alt="confetti" class="confetti">
                 </div>
                 <div class="inside-text">
@@ -84,12 +89,12 @@
                     <h3 class="toyou">to you!</h3>
                 </div>
                 <div class="wishes">
-                    <p>Dear Muski,</p>
+                    <p>Dear Palak,</p>
                     <p>Happy birthday!! I hope your day is filled with lots of love and laughter! May all of your
                         birthday
                         wishes come true.</p>
-                        <p class="name">~ From Sakuu</p>
-                    </div>
+                    <p class="name">~ From Ayush</p>
+                </div>
             </div>
         </div>
     </div>
@@ -97,28 +102,32 @@
     <div class="letter-container">
         <button id="forYouButton">This is for you 🤭</button>
         <div id="letter" class="letter" style="display: none;">
-            <p>My love,</p>
+            <p>My Sweetheart,</p>
             <p>
 
-                Happy Birthday to the most beautiful person in my life! Even though we are miles apart, my heart is always with you. Every moment without you reminds me how precious you are to me. I wish I could be there to celebrate with you, but I hope this message makes you feel my love and warmth.
-                
-                You are my happiness, my strength, and my greatest blessing. No matter the distance, my love for you only grows stronger. I can’t wait for the day we celebrate together, but until then, know that you are always in my thoughts and in my heart.
-                
+                Happy Birthday to the most beautiful person in my life! Even though we are miles apart, my heart is
+                always with you. Every moment without you reminds me how precious you are to me. I wish I could be there
+                to celebrate with you, but I hope this message makes you feel my love and warmth.
+
+                You are my happiness, my strength, and my greatest blessing. No matter the distance, my love for you
+                only grows stronger. I can’t wait for the day we celebrate together, but until then, know that you are
+                always in my thoughts and in my heart.
+
                 Wishing you a day as special and amazing as you are!
-                
+
                 With all my love
-                Saket 🤗🧿
-                
-                </p>
-            
-            
+                Ayush 🤗🧿
+
+            </p>
+
+
         </div>
     </div>
 
-   
+
 
     <script>
-        document.getElementById('forYouButton').addEventListener('click', function() {
+        document.getElementById('forYouButton').addEventListener('click', function () {
             var letter = document.getElementById('letter');
             if (letter.style.display === 'none') {
                 letter.style.display = 'block';
@@ -126,6 +135,112 @@
                 letter.style.display = 'none';
             }
         });
+
+        // document.getElementById("bcard").addEventListener('click', function () {
+        //     let card = document.querySelector(".birthdayCard");
+        //     card.style.boxShadow = "inset 100px 20px 100px rgba(0, 0, 0, .15), 0 10px 100px rgba(0, 0, 0, 0.3)";
+        //     let cardFront = document.querySelector(".cardFront");
+        //     cardFront.style.transform = "rotateY(-160deg)";
+
+        //     let fontT = document.querySelector(".front-text");
+        //     fontT.style.display = "none";
+
+        //     let warpd = document.querySelector(".wrap-deco");
+        //     warpd.style.display = "none";
+
+        //     let warpdT = document.querySelector(".wrap-decoTwo");
+        //     warpdT.style.display = "none";
+
+        //     let plate = document.querySelector(".plate");
+        //     plate.style.display = "none"
+        // });
+        document.getElementById("bcard").addEventListener('click', function () {
+            let card = document.querySelector(".birthdayCard");
+            let cardFront = document.querySelector(".cardFront");
+            let fontT = document.querySelector(".front-text");
+            let warpd = document.querySelector(".wrap-deco");
+            let warpdT = document.querySelector(".wrap-decoTwo");
+            let plate = document.querySelector(".plate");
+
+            // Toggle cardFront open/close state
+            if (cardFront.classList.contains("open")) {
+                // Close the card
+                cardFront.style.transform = "rotateY(0deg)";
+                cardFront.classList.remove("open");
+
+                // Restore hidden elements
+                fontT.style.display = "block";
+                warpd.style.display = "block";
+                warpdT.style.display = "block";
+                plate.style.display = "block";
+
+                setTimeout(() => {
+                    fontT.style.opacity = "1";
+                    warpd.style.opacity = "1";
+                    warpdT.style.opacity = "1";
+                    plate.style.opacity = "1";
+                }, 10); // Delay slightly to allow display change before opacity transition
+            } else {
+                // Open the card
+                cardFront.style.transform = "rotateY(-160deg)";
+                cardFront.classList.add("open");
+
+                // Hide elements with a fade-out effect
+                fontT.style.opacity = "0";
+                fontT.style.transition = "opacity 0.5s ease-in-out";
+                warpd.style.opacity = "0";
+                warpd.style.transition = "opacity 0.5s ease-in-out";
+                warpdT.style.opacity = "0";
+                warpdT.style.transition = "opacity 0.5s ease-in-out";
+                plate.style.opacity = "0";
+                plate.style.transition = "opacity 0.5s ease-in-out";
+
+                // Delay hiding elements until fade-out is complete
+                setTimeout(() => {
+                    fontT.style.display = "none";
+                    warpd.style.display = "none";
+                    warpdT.style.display = "none";
+                    plate.style.display = "none";
+                }, 500); // Match opacity transition duration
+
+                // Add a message inside the card
+                let cardInside = document.querySelector(".cardInside");
+                if (!cardInside) {
+                    cardInside = document.createElement("div");
+                    cardInside.className = "cardInside";
+                    cardInside.innerHTML = "<h2>Happy Birthday!</h2><p>Wishing you a fantastic day filled with joy and laughter!</p>";
+                    card.appendChild(cardInside);
+                }
+                cardInside.style.opacity = "1";
+                cardInside.style.transition = "opacity 1s ease-in-out";
+
+                // Optional: Add confetti effect
+                setTimeout(() => {
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 }
+                    });
+                }, 1000);
+            }
+
+            cardFront.style.transition = "transform 1s ease-in-out";
+        });
+
+        // Optional: Add hover effects for extra interactivity
+        document.getElementById("bcard").addEventListener('mouseenter', function () {
+            let card = document.querySelector(".birthdayCard");
+            card.style.transform = "scale(1.05)";
+            card.style.transition = "transform 0.3s ease-in-out";
+        });
+
+        document.getElementById("bcard").addEventListener('mouseleave', function () {
+            let card = document.querySelector(".birthdayCard");
+            card.style.transform = "scale(1)";
+            card.style.transition = "transform 0.3s ease-in-out";
+        });
+
+
     </script>
 </body>
 

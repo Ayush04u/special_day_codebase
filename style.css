@@ -46,37 +46,37 @@ img {
     transition: 4s;
 }
 
-.birthdayCard:hover {
+/* .birthdayCard:hover {
     transform: perspective(2500px) rotate(5deg);
     box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .15), 0 10px 100px rgba(0, 0, 0, 0.3);
-}
+} */
 
-
+/* 
 .birthdayCard:hover .cardFront {
     transform: rotateY(-160deg);
-}
+} */
 
-.birthdayCard:hover .front-text {
+/* .birthdayCard:hover .front-text {
     display: none;
-}
+} */
 
-.birthdayCard:hover .wrap-deco {
+/* .birthdayCard:hover .wrap-deco {
     display: none;
-}
+} */
 
-.birthdayCard:hover .wrap-decoTwo {
+/* .birthdayCard:hover .wrap-decoTwo {
     display: none;
-}
+} */
 
-.birthdayCard:hover .plate {
+/* .birthdayCard:hover .plate {
     display: none;
-}
+} */
 
 .cardFront {
     position: relative;
     background-color: #fff;
     width: 250px;
-    height: 350px;
+    height: 359px;
     overflow: hidden;
     transform-origin: left;
     box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .13), 30px 0 50px rgba(0, 0, 0, 0.1);
@@ -248,7 +248,7 @@ img {
     position: absolute;
     background-color: #fff;
     width: 250px;
-    height: 350px;
+    height: 359px;
     z-index: -1;
     left: 0;
     top: 0;
@@ -257,7 +257,7 @@ img {
 
 .bdyboy {
     display: inline-block;
-    height: 120px;
+    height: 150px;
     border-top: 2px solid skyblue;
 }
 
