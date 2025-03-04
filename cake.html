@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
         .heading {
             font-size: 3.5rem;
             color: #ff71b6;
-            text-shadow: 
+            text-shadow:
                 0 0 10px rgba(255, 113, 182, 0.5),
                 0 0 20px rgba(255, 113, 182, 0.3),
                 0 0 30px rgba(255, 113, 182, 0.2);
@@ -41,6 +42,7 @@
             from {
                 text-shadow: 0 0 10px #ff71b6, 0 0 20px #ff71b6, 0 0 30px #ff9ecd;
             }
+
             to {
                 text-shadow: 0 0 20px #ff71b6, 0 0 30px #ff71b6, 0 0 40px #ff9ecd;
             }
@@ -146,17 +148,28 @@
             0% {
                 transform: translateY(0) rotate(0deg) translateX(0);
             }
+
             50% {
                 transform: translateY(50vh) rotate(180deg) translateX(100px);
             }
+
             100% {
                 transform: translateY(100vh) rotate(360deg) translateX(-100px);
             }
         }
 
         @keyframes flicker {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(0.9); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(0.9);
+                opacity: 0.8;
+            }
         }
 
         .smoke {
@@ -170,10 +183,19 @@
         }
 
         @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
+
         .next-page-button {
             position: fixed;
             bottom: 40px;
@@ -187,7 +209,7 @@
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.3s ease;
-            box-shadow: 
+            box-shadow:
                 0 0 15px rgba(255, 113, 182, 0.5),
                 0 0 30px rgba(255, 113, 182, 0.3);
             font-family: 'Arial', sans-serif;
@@ -196,42 +218,45 @@
             align-items: center;
             gap: 10px;
         }
-    
+
         .next-page-button::after {
             content: '→';
             font-size: 1.4rem;
             transition: transform 0.3s ease;
         }
-    
+
         .next-page-button:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 
+            box-shadow:
                 0 0 20px rgba(255, 113, 182, 0.6),
                 0 0 40px rgba(255, 113, 182, 0.4);
             background: linear-gradient(45deg, #ffb7e0, #ff8ac7);
         }
-    
+
         .next-page-button:hover::after {
             transform: translateX(5px);
         }
-    
+
         @keyframes pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.05);
             }
         }
-    
+
         .next-page-button.show {
             opacity: 1;
             transform: translateY(0);
             animation: pulse 2s infinite;
         }
-    
     </style>
 </head>
+
 <body>
     <h1 class="heading">Let's Cut the Cake! 🎂</h1>
     <div class="cake-container">
@@ -253,6 +278,7 @@
                 <div class="candle">
                     <div class="flame"></div>
                 </div>
+                <audio id="music" src="ReelAudio-47435.mp3"></audio>
             </div>
         </div>
     </div>
@@ -291,6 +317,15 @@
             if (isClicked) return;
             isClicked = true;
 
+            var music = document.getElementById('music');
+            music.play();
+
+            // Stop the music after 10 seconds
+            setTimeout(function () {
+                music.pause();
+                music.currentTime = 0; // Reset the audio to the beginning
+            }, 20000);
+
             // Fade out candle smoothly
             gsap.to(candle, {
                 opacity: 0,
@@ -328,4 +363,5 @@
         cake.addEventListener('click', startCelebration);
     </script>
 </body>
+
 </html>
